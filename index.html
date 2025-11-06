@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auditoría IA para Empresas | DataVision AI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* LOGO Y HEADER */
+        .logo {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .logo-container {
+            display: inline-flex;
+            align-items: center;
+            background: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .logo-icon {
+            font-size: 2.5em;
+            margin-right: 15px;
+        }
+        
+        .logo-text {
+            font-size: 1.8em;
+            font-weight: bold;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .tagline {
+            color: white;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        header {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1em;
+            display: inline-block;
+            margin: 20px 0;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .card li:before {
+            content: "✅ ";
+            margin-right: 10px;
+        }
+        
+        .cta-section {
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .price {
+            font-size: 3em;
+            color: #e74c3c;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .guarantee {
+            background: #f8f9fa;
+            border-left: 4px solid #2ecc71;
+            padding: 20px;
+            margin: 25px 0;
+            text-align: left;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            margin: 15px 10px;
+        }
+        
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .testimonial {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 4px solid #3498db;
+        }
+        
+        .contact-info {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+            padding: 30px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- LOGO -->
+        <div class="logo">
+            <div class="logo-container">
+                <div class="logo-icon">🔍</div>
+                <div class="logo-text">DataVision AI</div>
+            </div>
+            <p class="tagline">Descubre lo que tus datos esconden</p>
+        </div>
+
+        <header>
+            <h1>Auditoría IA para Empresas</h1>
+            <p class="subtitle">Transformamos tus datos en oportunidades de crecimiento concretas</p>
+            <div class="highlight">€297 • Garantía de resultados o reembolso completo</div>
+        </header>
+
+        <div class="grid">
+            <div class="card">
+                <h3>📊 ¿Qué Incluye?</h3>
+                <ul>
+                    <li>Análisis completo de tus datos de ventas</li>
+                    <li>Detección de patrones ocultos con IA</li>
+                    <li>3 oportunidades concretas de implementación</li>
+                    <li>Estimación de ahorro/ganancia para cada una</li>
+                    <li>Plan de implementación paso a paso</li>
+                    <li>Reunión de presentación de resultados</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>🎯 Resultados Típicos</h3>
+                <ul>
+                    <li>Identificación de clientes en riesgo de fuga</li>
+                    <li>Optimización de precios y márgenes</li>
+                    <li>Detección de productos estrella</li>
+                    <li>Automatización de procesos manuales</li>
+                    <li>Mejora de la experiencia del cliente</li>
+                    <li>Reducción de costes operativos</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>🚀 Para Quién Es Ideal</h3>
+                <ul>
+                    <li>Pequeñas y medianas empresas</li>
+                    <li>E-commerce con +100 ventas/mes</li>
+                    <li>Restaurantes con sistema de reservas</li>
+                    <li>Consultoras con base de clientes</li>
+                    <li>Startups con datos de crecimiento</li>
+                    <li>Cualquier empresa con +2 años de datos</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <h3>💬 Caso de Éxito Real</h3>
+            <p><em>"DataVision AI identificó que el 23% de nuestros clientes premium estaban en riesgo de cancelación. Implementamos las recomendaciones y redujimos la fuga en un 15% en el primer mes, salvando €4,200 mensuales en ingresos recurrentes."</em></p>
+            <p><strong>- Carlos M., Director de E-commerce</strong></p>
+        </div>
+
+        <div class="contact-info">
+            <h3>📞 ¿Tienes Dudas?</h3>
+            <p>Email: <strong>notsukram@gmail.com</strong></p>
+            <p>WhatsApp: <strong>+34 601 744 029</strong></p>
+            <p><small>Respuesta en menos de 4 horas</small></p>
+        </div>
+
+        <div class="cta-section">
+            <h2>¿Listo para Transformar Tus Datos en Resultados?</h2>
+            <div class="price">€297</div>
+            
+            <div class="guarantee">
+                <h3>✅ Garantía de Satisfacción Total</h3>
+                <p>Si no identifico al menos <strong>una oportunidad con ROI positivo</strong> para tu negocio, te devuelvo el 100% de tu inversión. Sin preguntas.</p>
+            </div>
+            
+            <a href="mailto:notsukram@gmail.com?subject=Solicito Auditoría IA&body=Hola, estoy interesado en la Auditoría IA de €297. Por favor, contactenme para coordinar." class="btn">
+                📧 Solicitar Auditoría Ahora
+            </a>
+            
+            <p><small>⏱️ Oferta limitada a 5 auditorías mensuales</small></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 <strong>DataVision AI</strong>. Todos los derechos reservados.</p>
+        <p><small>Consultoría especializada en Inteligencia Artificial para negocios</small></p>
+    </footer>
+</body>
+</html>
